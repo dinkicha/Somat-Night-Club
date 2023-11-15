@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif
+}
+
+body {
+    background: #331F1F;
+}
+
+.wrapper {
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px;
+    background-color: #DC2321;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    margin-left: 800px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #331F1F;
+    margin-bottom: 1.2rem;
+}
+
+form input {
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+}
+
+button {
+ font-size: 1rem;
+ margin-top: 1rem;
+ padding: 10px 0;
+ border-radius: 20px;
+ outline: none;
+ border: none;
+ width: 90%;
+ color: #fff;
+ cursor: pointer;
+ background: rgb(17, 107, 143);   
+}
+
+button:hover {
+    background: rgba(17, 107, 143, 0.877);
+}
+
+input:focus {
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.terms {
+    margin-top: 0.2rem;
+}
+
+.terms input {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.terms label {
+    font-size: 0.9rem;
+    color: #331F1F;
+}
+
+.terms a {
+    color: rgb(17, 107, 143);
+    text-decoration: none;
+}
+
+.member {
+    font-size: 1rem;
+    margin-top: 1.4rem;
+    color: #331F1F;
+}
+
+.member a {
+    color: rgb(17, 107, 143);
+    text-decoration: none;
+}

@@ -23,7 +23,7 @@ header {
       color: white;
       text-align: center;
       width: 100px;
-      height: 35px;
+      height: 37px;
       text-decoration: none;
       font-size: 25px;
 }
@@ -31,3 +31,7 @@ header {
 .navigation a:hover {
     border-bottom: 3px solid red;
   }
+
+.navigation .a.active {
+    color: red;
+}
