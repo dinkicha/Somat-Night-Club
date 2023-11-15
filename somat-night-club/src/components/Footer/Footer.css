@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  
+}
+
+body {
+    min-height: 100vh;
+}
+
+.footer-container {
+    background-color: #331F1F;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+

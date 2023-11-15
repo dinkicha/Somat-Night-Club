@@ -1,0 +1,33 @@
+.logo {
+    margin: 50px;
+    width: 200px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.navigation {
+    display: flex;
+    color: white;
+    gap: 40px;
+    margin: 50px;
+    padding: 20px;
+    font-size: 22px;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.navigation a {
+    float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 35px;
+      text-decoration: none;
+      font-size: 25px;
+}
+
+.navigation a:hover {
+    border-bottom: 3px solid red;
+  }
