@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+font-size: 18px;
+}
+
+.Contact {
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-box {
+    background: #fff;
+    display: flex;
+    width: 850px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+}
+
+.contact-left {
+    flex-basis: 160px;
+    padding: 40px 60px;
+    color: black;
+}
+
+.Connect {
+    margin-bottom: 10px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 450px;
+}
+
+input {
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+.message {
+    width: 760px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+    max-height: 200px
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+}
+
+.SendContact {
+    width: 100px;
+    border: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 5px;
+    box-shadow: 0px 5px 15px 0px rgba(28,0, 181, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 320px;
+}
+
+.SendContact:hover {
+    background: rgba(17, 107, 143, 0.877);
+}
+
+.contact-left h3 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+

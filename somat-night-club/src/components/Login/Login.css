@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #331f1f;
+}
+
+.wrapper2 {
+  width: 330px;
+  padding: 2rem 1rem;
+  margin: 50px;
+  background-color: #dc2321;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 800px;
+  position: relative;
+  bottom: -8em;
+  left: -0.3em;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+form input {
+  width: 92%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #e4e4e4;
+}
+
+.Signin {
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  width: 90%;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 15px;
+}
+
+.Signin:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+input:focus {
+  border: 1px solid rgb(192, 192, 192);
+}

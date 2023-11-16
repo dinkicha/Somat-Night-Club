@@ -16,7 +16,7 @@ export default function Register() {
             <input type="checkbox" id="checkbox"></input>
             <label form="checkbox"> I agree to these <a href="#">Terms & Conditions</a></label>
             </div>
-            <button>Sign up</button>
+            <button className="Signup">Sign up</button>
             <div className="member">
             Already a member? <Link to="/login">Login Here</Link>
             </div>
