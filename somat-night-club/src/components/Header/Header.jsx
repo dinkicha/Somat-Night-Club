@@ -7,8 +7,9 @@ export default function Header() {
         <header>
         <img src={logo} className='logo'></img>
         <nav className="navigation">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/pictures">Pictures</Link>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
             <Link to="/profile">Profile</Link>

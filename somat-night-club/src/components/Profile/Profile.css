@@ -1,0 +1,112 @@
+.profile {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+}
+
+.profileInfo {
+  width: 1000px;
+  padding: 2rem 1rem;
+  margin: 50px;
+  border: solid red;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 600px;
+  position: relative;
+  bottom: 2em;
+  left: -8.2em;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.EditProfile {
+  color: #fff;
+  margin-left: 100px;
+}
+
+.DeleteProfile {
+  color: #fff;
+  margin-right: 200px;
+}
+
+.EditProfile:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.DeleteProfile:hover {
+  background: red;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.firstField {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.secondField {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.thirdField {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.photoProfile {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.info {
+    width: 1100px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.controls {
+  margin-left: 50px;
+}

@@ -1,0 +1,51 @@
+.HomePage {
+  width: 730px;
+  padding: 2rem 1rem;
+  margin: 50px;
+  border: solid red;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 600px;
+  position: relative;
+  bottom: -8em;
+  left: -0.3em;
+}
+
+.SignupHome {
+  color: #fff;
+  margin-left: 200px;
+}
+
+.SigninHome {
+  color: #fff;
+  margin-right: 200px;
+}
+
+.SignupHome:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.SigninHome:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.buttonsHome {
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 40px;
+  gap: 20px;
+}
+
+.nightclub-name {
+  font-weight: 1200;
+  color: red;
+}

@@ -7,6 +7,7 @@ export default function Register() {
         <div className="wrapper">
             <h1>Sign up</h1>
             <form action="#">
+                <input type="text" placeholder="Email"></input>
                 <input type="text" placeholder="Username"></input>
                 <input type="text" placeholder="Name"></input>
                 <input type="text" placeholder="Password"></input>

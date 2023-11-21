@@ -20,6 +20,6 @@ body {
     padding-bottom: 20px;
 }
 
-/* .fa-brands .fa-github:hover {
-  background: red;
-} */
+.fa-brands:hover {
+  color: red;
+}
