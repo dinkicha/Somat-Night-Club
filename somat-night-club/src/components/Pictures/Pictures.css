@@ -1,0 +1,33 @@
+.listingHome {
+    width: 800px;
+    padding: 2rem 1rem;
+    margin: 50px;
+    border: solid red;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    margin-left: 600px;
+    position: relative;
+    bottom: -9em;
+    left: -2.5em;
+    display: flex;
+    align-items: center;
+  }
+
+.title {
+  margin-bottom: 30px;
+}
+
+.inputFieldTitlePictures {
+  width: 360px;
+}
+
+.desc {
+  width: 760px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  max-height: 200px
+}
