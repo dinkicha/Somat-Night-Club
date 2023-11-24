@@ -1,33 +1,88 @@
 .listingHome {
-    width: 800px;
-    padding: 2rem 1rem;
-    margin: 50px;
-    border: solid red;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-    margin-left: 600px;
-    position: relative;
-    bottom: -9em;
-    left: -2.5em;
-    display: flex;
-    align-items: center;
-  }
-
-.title {
-  margin-bottom: 30px;
+  width: 800px;
+  padding: 2rem 1rem;
+  margin: 50px;
+  border: solid red;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 600px;
+  position: relative;
+  bottom: -3em;
+  left: -2.5em;
+  display: flex;
 }
 
-.inputFieldTitlePictures {
+.headingPictures {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.title-picture {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.InputField {
   width: 360px;
+  height: 100%;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid red;
+  color: white;
+  padding-left: 30px;
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
 }
 
 .desc {
-  width: 760px;
+  width: 360px;
   border: 1px solid #ccc;
   outline: none;
   padding: 10px;
   box-sizing: border-box;
   resize: vertical;
-  max-height: 200px
+  max-height: 200px;
 }
+
+.firstInputField {
+  position: relative;
+  height: 40px;
+}
+
+.firstInputField .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  padding-left: 5px;
+  display: flex;
+  margin-left: 200px;
+}
+
+.Create {
+  font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 95%;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 15px;
+}
+
+.Create:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+

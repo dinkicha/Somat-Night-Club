@@ -24,7 +24,7 @@ header {
       display: block;
       color: white;
       text-align: center;
-      width: 100px;
+      width: fit-content;
       height: 37px;
       text-decoration: none;
       font-size: 25px;

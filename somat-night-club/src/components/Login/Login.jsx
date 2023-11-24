@@ -6,8 +6,8 @@ export default function Login() {
         <div className="wrapper2">
         <h1>Sign in</h1>
         <form action="#">
-            <input type="text" placeholder="Username"></input>
-            <input type="text" placeholder="Password"></input>
+            <input className="login-input" type="text" placeholder="Username"></input>
+            <input className="login-input" type="text" placeholder="Password"></input>
         </form>
         <button className="Signin">Sign in</button>
         <div className="member">

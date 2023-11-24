@@ -47,8 +47,8 @@ font-size: 18px;
     flex-basis: 450px;
 }
 
-input {
-    width: 100px;
+.input-contact {
+    width: 350px;
     border: none;
     border-bottom: 1px solid #ccc;
     outline: none;

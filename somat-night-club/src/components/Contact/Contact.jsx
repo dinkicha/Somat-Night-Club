@@ -12,21 +12,21 @@ export default function Contact() {
                         <div className="input-row">
                             <div className="input-group">
                                 <label>Name</label>
-                                <input type="text" placeholder="Ivan Petrov"></input>
+                                <input className="input-contact" type="text" placeholder="Ivan Petrov"></input>
                             </div>
                             <div className="input-group">
                                 <label>Phone</label>
-                                <input type="text" placeholder="+359 889016925"></input>
+                                <input className="input-contact" type="text" placeholder="+359 889016925"></input>
                             </div>
                         </div>
                         <div className="input-row">
                             <div className="input-group">
                                 <label>Email</label>
-                                <input type="email" placeholder="somatnightclub@gmail.com"></input>
+                                <input className="input-contact" type="email" placeholder="somatnightclub@gmail.com"></input>
                             </div>
                             <div className="input-group">
                                 <label>Subject</label>
-                                <input type="text" placeholder="Subject of the problem"></input>
+                                <input className="input-contact" type="text" placeholder="Subject of the problem"></input>
                             </div>
                         </div>
                         <label>Message</label>

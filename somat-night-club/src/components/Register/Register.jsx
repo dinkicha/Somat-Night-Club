@@ -7,11 +7,11 @@ export default function Register() {
         <div className="wrapper">
             <h1>Sign up</h1>
             <form action="#">
-                <input type="text" placeholder="Email"></input>
-                <input type="text" placeholder="Username"></input>
-                <input type="text" placeholder="Name"></input>
-                <input type="text" placeholder="Password"></input>
-                <input type="text" placeholder="Confirm Password"></input>
+                <input className="login-input" type="text" placeholder="Email"></input>
+                <input className="login-input" type="text" placeholder="Username"></input>
+                <input className="login-input" type="text" placeholder="Name"></input>
+                <input className="login-input" type="text" placeholder="Password"></input>
+                <input className="login-input" type="text" placeholder="Confirm Password"></input>
             </form>
             <div className="terms">
             <input type="checkbox" id="checkbox"></input>

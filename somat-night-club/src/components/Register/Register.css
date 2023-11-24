@@ -27,16 +27,6 @@ h1 {
     margin-bottom: 1.2rem;
 }
 
-form input {
-    width: 92%;
-    outline: none;
-    border: 1px solid #fff;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    background: #e4e4e4;
-}
-
 .Signup {
  font-size: 1rem;
  margin-top: 1rem;
@@ -56,10 +46,6 @@ form input {
 
 .Signup:hover {
     background: rgba(17, 107, 143, 0.877);
-}
-
-input:focus {
-    border: 1px solid rgb(192, 192, 192);
 }
 
 .terms {

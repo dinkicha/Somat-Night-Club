@@ -40,9 +40,9 @@
   gap: 20px;
 }
 
-.title {
+.title-home {
   font-size: 40px;
-  gap: 20px;
+  font-weight: 700;
 }
 
 .nightclub-name {
