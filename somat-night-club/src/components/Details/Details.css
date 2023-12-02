@@ -1,0 +1,17 @@
+.description-reservation {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #0000000d;
+    transition: all .3s ease;
+    position: relative;
+    width: 300px;    
+    text-align: center;
+}
+
+.information-reservation-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}

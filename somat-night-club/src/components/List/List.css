@@ -1,0 +1,48 @@
+.container-reservations {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-reservations {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #0000000d;
+    position: relative;
+    width: 277px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 290px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.name-reservation {
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.list-reservations p {
+    color: grey;
+    font-size: .9em;
+}
+
+.details-button-reserv {
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 15px;
+}
+
+.details-button-reserv:hover {
+  background: rgba(17, 107, 143, 0.877);
+}

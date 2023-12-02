@@ -11,22 +11,38 @@ import Pictures from "./components/Pictures/Pictures";
 import Gallery from "./components/Gallery/Gallery";
 import Reservations from "./components/Reservations/Reservations";
 import List from "./components/List/List";
+import Details from "./components/Details/Details";
+import Edit from "./components/Edit/Edit";
+import Logout from "./components/LogOut/Logout";
+import { AuthProvider } from "./Contexts/authContext";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Routes><Route path="/" element={<Home />} /></Routes>
-      <Routes><Route path="/contact" element={<Contact />} /></Routes>
-      <Routes><Route path="/login" element={<Login />} /></Routes>
-      <Routes><Route path="/register" element={<Register />} /></Routes>
-      <Routes><Route path="/profile" element={<Profile />} /></Routes>
-      <Routes><Route path="/pictures" element={<Pictures />} /></Routes>
-      <Routes><Route path="/gallery" element={<Gallery />} /></Routes>
-      <Routes><Route path="/reservations" element={<Reservations />} /></Routes>
-      <Routes><Route path="/list" element={<List />} /></Routes>
-      <Footer />
-    </div>
+    <AuthProvider>
+      <div className="container">
+      <Toaster
+  position="bottom-right"
+  reverseOrder={true}
+/>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/profile/:profileId" element={<Profile />} />
+          <Route path="/pictures" element={<Pictures />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/list/:reservationId/details" element={<Details />} />
+          <Route path="/profile/:profileId/edit" element={<Edit />} />
+        </Routes>
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
 

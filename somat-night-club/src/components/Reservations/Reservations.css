@@ -1,0 +1,98 @@
+.create-reservation {
+  width: 730px;
+  padding: 2rem 1rem;
+  margin: 50px;
+  border: solid red;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 600px;
+  position: relative;
+  bottom: -8em;
+  left: -0.3em;
+  display: flex;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+}
+
+.textAreaReservation {
+  width: 350px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  max-height: 200px;
+}
+
+.create-reservation-button {
+  color: #fff;
+  margin-left: 200px;
+}
+
+.return-to-the-list {
+  color: #fff;
+  margin-right: 200px;
+  font-size: 17.5px;
+}
+
+.create-reservation-button:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+.return-to-the-list:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.reservation-buttons {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.InputFieldReservation {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid red;
+  color: white;
+  padding-left: 30px;
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-field .icon {
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  padding-left: 5px;
+}
+
+.first-input-reservation {
+  position: relative;
+}
+
+.second-input-reservation {
+  position: relative;
+}
