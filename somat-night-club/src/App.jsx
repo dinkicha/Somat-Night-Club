@@ -12,10 +12,11 @@ import Gallery from "./components/Gallery/Gallery";
 import Reservations from "./components/Reservations/Reservations";
 import List from "./components/List/List";
 import Details from "./components/Details/Details";
-import Edit from "./components/Edit/Edit";
+import Edit from "./components/EditProfile/Edit";
 import Logout from "./components/LogOut/Logout";
 import { AuthProvider } from "./Contexts/authContext";
 import { Toaster } from "react-hot-toast";
+import ContactForm from "./components/Contact/Contact";
 
 function App() {
   return (

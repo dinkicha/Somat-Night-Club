@@ -57,6 +57,25 @@
   height: 40px;
 }
 
+.photoPictures {
+  width: 360px;
+  height: 100%;
+  font-size: 17px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid red;
+  color: white;
+  padding-left: 30px;
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin-top: 5px; 
+  position: relative; 
+}
+
 .firstInputField .icon {
   position: absolute;
   top: 50%;

@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc, doc, getFirestore, setDoc } from "firebase/firestore";
+import { ErrorNotify, SuccessNotify } from "../utils/Notification";
 
 import usePersistedState from "../hooks/usePersistedState";
 
@@ -13,7 +14,7 @@ import {
 } from "firebase/auth";
 import { getAuth, updateProfile } from "firebase/auth";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAPdtpjZ5Z2JPX88aoDo622MeW5vuu93qM",
   authDomain: "somat-night-club.firebaseapp.com",
   databaseURL:
@@ -56,10 +57,11 @@ export const AuthProvider = ({
       const user = userCredential.user;
       setAuth(user);
       localStorage.setItem("id", user.uid);
+      SuccessNotify('Successfully logged in!')
       navigate("/");
       return user;
     } catch (error) {
-      console.error("Error logging in:", error.message);
+      ErrorNotify('Error logging in:', error.message);
       throw error;
     }
   };
@@ -94,10 +96,11 @@ export const AuthProvider = ({
       await setDoc(ref, userProfile);
       setAuth(user);
       localStorage.setItem("id", user.uid);
+      SuccessNotify('Your profile has been registered successfully!')
       navigate("/");
       return user;
     } catch (error) {
-      console.error("Error registering user:", error.message);
+      ErrorNotify('Error registering user:', error.message)
       throw error;
     }
   };
@@ -110,9 +113,11 @@ export const AuthProvider = ({
     try {
       await signOut(fireAuth);
       setAuth({});
+      SuccessNotify('User logged out successfully!')
       localStorage.removeItem("Id");
     } catch (error) {
-      console.error("Error logging out:", error.message);
+      ErrorNotify("Error logging out:"+ error.message);
+      ErrorNotify('Error logging out:' + error.message)
       throw error;
     }
   };

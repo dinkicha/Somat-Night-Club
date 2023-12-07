@@ -76,6 +76,6 @@ h1 {
 }
 
 .member a {
-    color: rgb(17, 107, 143);
+    /* color: rgb(17, 107, 143); */
     text-decoration: none;
 }

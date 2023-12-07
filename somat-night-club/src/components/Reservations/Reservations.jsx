@@ -3,17 +3,22 @@ import { Link, useNavigate } from 'react-router-dom';
 import { collection, addDoc } from "firebase/firestore";
 import { getFirestore} from 'firebase/firestore';
 import { Error } from "../../utils/Error";
-import { ErrorNotify } from "../../utils/Notification";
+import { ErrorNotify, SuccessNotify } from "../../utils/Notification";
+import { useContext } from "react";
+import AuthContext from "../../Contexts/authContext";
 const db = getFirestore();
 
 export default function Reservations() {
     const navigate = useNavigate();
+  const { userId } = useContext(AuthContext);
    const CreateReservation = async (e) => {
     e.preventDefault();
     const values = Object.fromEntries(new FormData(e.currentTarget));
+    values.owner = userId;
     try {
         const ref = collection(db, "reservations");
         await addDoc(ref, values);
+        SuccessNotify('Congratulations, you have successfully added a reservation!')
         navigate('/list')
     } catch (error) {
        let errors =  Error(error);

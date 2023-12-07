@@ -6,7 +6,7 @@
     box-shadow: 3px 3px 3px #0000000d;
     transition: all .3s ease;
     position: relative;
-    width: 300px;    
+    width: 400px;    
     text-align: center;
 }
 
@@ -14,4 +14,26 @@
   display: flex;
   justify-content: center;
   margin-top: 250px;
+}
+
+.editDetails:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.returnListDetails:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.buttonsDetails {
+  display: flex;
+  gap: 20px;
+  height: 65px;
+}
+
+.buttonsDetails button {
+  color: #fff !important;
+}
+
+.deleteReservation:hover {
+  background: red;
 }

@@ -1,0 +1,31 @@
+.pictures-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 3em;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+.picture  {
+  border: solid red;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.picture img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.deletePicture {
+  color: #fff;
+  width: 200px;
+}
+
+.deletePicture:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
