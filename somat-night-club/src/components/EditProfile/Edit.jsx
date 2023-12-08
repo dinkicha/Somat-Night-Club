@@ -11,7 +11,6 @@ const db = getFirestore();
 const auth = getAuth();
 
 export default function Edit() {
-  const { userId } = useContext(AuthContext);
   const { profileId } = useParams();
   const [user, setUser] = useState({
     uid: "",
@@ -26,11 +25,11 @@ export default function Edit() {
       if (ref.exists) {
         return ref.data();
       } else {
-        console.error("User profile not found");
+        ErrorNotify("User profile not found");
         return null;
       }
     } catch (error) {
-      console.error("Error getting user profile:", error.message);
+      ErrorNotify("Error getting user profile:" + error.message);
       return null;
     }
   };

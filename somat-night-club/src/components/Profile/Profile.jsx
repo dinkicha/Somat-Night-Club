@@ -1,13 +1,18 @@
 import "./Profile.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { doc, getFirestore, getDoc, deleteDoc } from "firebase/firestore";
+import {
+  doc,
+  getFirestore,
+  getDoc,
+  deleteDoc,
+  updateDoc,
+} from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
 import { deleteUser, getAuth } from "firebase/auth";
 import AuthContext from "../../Contexts/authContext";
 import { getStorage } from "firebase/storage";
-import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
-import { v4 as uuidv4 } from "uuid";
 import { ErrorNotify, SuccessNotify } from "../../utils/Notification";
 
 const db = getFirestore();
@@ -41,7 +46,7 @@ export default function Profile() {
       logoutHandler();
       navigate("/login");
     } catch (error) {
-      console.error("Error deleting user:", error.message);
+      ErrorNotify("Error deleting user:" + error.message);
     }
   };
   const [userProfile, setUserProfile] = useState({
@@ -60,54 +65,38 @@ export default function Profile() {
 
     fetchUserProfile();
   }, [profileId]);
-  
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageList, setImageList] = useState([]);
 
-  const imageListRef = ref(storage, "images/");
+  const [imageUpload, setImageUpload] = useState(null);
+
   const uploadImage = () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageList((prev) => [...prev, { url, id: uuidv4() }]);
+      getDownloadURL(snapshot.ref).then(async (url) => {
+        try {
+          const userRef = doc(db, "users", profileId);
+          await updateDoc(userRef, { pfp: url });
+          const profile = await getUserProfileByUid(profileId);
+      setUserProfile(profile);
+        } catch (error) {
+          let errors = Error(error);
+          console.log(errors);
+          errors.forEach((err) => {
+            ErrorNotify(err);
+          });
+          return;
+        }
       });
       SuccessNotify("Image uploaded successfully!");
     });
   };
-
-  useEffect(() => {
-    listAll(imageListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageList((prev) => [...prev, url]);
-        });
-      });
-    });
-  }, [imageListRef]);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await listAll(imageListRef);
-        const urls = await Promise.all(
-          response.items.map(async (item) => getDownloadURL(item))
-        );
-        setImageList((prev) => [...prev, ...urls]);
-      } catch (error) {
-        console.error("Error fetching images:" + error);
-      }
-    };
-  
-    fetchImages();
-  }, []); 
 
   return (
     <div className="profile">
       <div className="title">Profile Information</div>
       <div className="profileInfo">
         <div className="photoProfile">
-        <img src={imageList}/>
+          <img src={userProfile.pfp} />
         </div>
         <div className="info">
           <div className="firstField">
@@ -123,7 +112,22 @@ export default function Profile() {
             <div className="side">{userProfile.username}</div>
           </div>
           <div className="controls">
-          <button onClick={uploadImage} className="UploadImage">Upload Image</button>
+            <div
+              className="file-upload-wrapper"
+              data-text={
+                imageUpload !== null ? imageUpload.name : "Select your file!"
+              }
+            >
+              <input
+                name="file-upload-field"
+                type="file"
+                className="file-upload-field"
+                onChange={(e) => setImageUpload(e.target.files[0])}
+              />
+            <button onClick={uploadImage} className="UploadImage">
+              Upload
+            </button>
+            </div>
             <button
               onClick={() => navigate(`/profile/${userProfile.uid}/edit`)}
               className="EditProfile"
@@ -136,11 +140,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      <div className="photoProfileSelect">
-      <input type="file" onChange={(e) => setImageUpload(e.target.files[0])} />
-      </div>
     </div>
   );
 }
-
-

@@ -38,11 +38,14 @@
 
 .DeleteProfile {
   color: #fff;
-  margin-right: 200px;
 }
 
 .UploadImage {
   color: #fff;
+  border-radius: 0px 10px 10px 0px;
+  height: 50px !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .UploadImage:hover {
@@ -100,10 +103,11 @@
   padding: 10px;
 }
 
-.photoProfile {
+.photoProfile img {
   width: 300px;
   border-radius: 10px;
   margin-bottom: 30px;
+  aspect-ratio: 1/1;
 }
 
 .info {
@@ -117,7 +121,6 @@
 }
 
 .controls {
-  margin-left: 50px;
   position: relative;
   align-items: center;
 }
@@ -126,8 +129,42 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 400px;
   position: relative;
-  margin-top: -170px;
+}
+
+.controls button {
+  width: fit-content !important;
+}
+
+.file-upload-wrapper {  
+  position: relative;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  
+  &:after {
+    content: attr(data-text);
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    display: block;
+    width: 200px;
+    pointer-events: none;
+    z-index: 20;
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    border-radius: 10px 0px 0px 10px;
+    font-weight: 300;
+  }
+  
+}
+.file-upload-wrapper input {
+ height: 50px;
+ cursor: pointer;
+ border-radius: 10px;
+ width: 200px !important;
 }
 

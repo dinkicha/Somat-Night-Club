@@ -68,7 +68,6 @@ export default function Details() {
     <div className="details-container">
       <div className="information-reservation-list">
         <div className="description-reservation">
-          <h3>Name of the reservation</h3>
           <p>Reservation details: {reservation.details}</p>
           <p>Created by: {reservation.name}</p>
           <p>People: {reservation.people}</p>
@@ -84,7 +83,7 @@ export default function Details() {
               <>
             <button
               className="editDetails"
-              onClick={() => navigate(`/details/${reservation.id}/ListEdit`)}
+              onClick={() => navigate(`/list/${reservationId}/edit`)}
             >
               Edit
             </button>

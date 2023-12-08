@@ -16,6 +16,7 @@ import Edit from "./components/EditProfile/Edit";
 import Logout from "./components/LogOut/Logout";
 import { AuthProvider } from "./Contexts/authContext";
 import { Toaster } from "react-hot-toast";
+import EditList from "./components/EditList/ListEdit";
 import ContactForm from "./components/Contact/Contact";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/list" element={<List />} />
+          <Route path="/list/:reservationId/edit" element={<EditList />} />
           <Route path="/list/:reservationId/details" element={<Details />} />
           <Route path="/profile/:profileId/edit" element={<Edit />} />
         </Routes>
