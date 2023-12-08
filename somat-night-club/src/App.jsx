@@ -17,8 +17,8 @@ import Logout from "./components/LogOut/Logout";
 import { AuthProvider } from "./Contexts/authContext";
 import { Toaster } from "react-hot-toast";
 import EditList from "./components/EditList/ListEdit";
-import ContactForm from "./components/Contact/Contact";
-
+import Error from "./components/Error/Error"
+ 
 function App() {
   return (
     <AuthProvider>
@@ -42,6 +42,7 @@ function App() {
           <Route path="/list/:reservationId/edit" element={<EditList />} />
           <Route path="/list/:reservationId/details" element={<Details />} />
           <Route path="/profile/:profileId/edit" element={<Edit />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </div>
