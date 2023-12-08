@@ -9,22 +9,41 @@ const db = getFirestore();
 export default function Pictures() {
   const navigate = useNavigate();
   const { userId } = useContext(AuthContext);
-   const AddPicture = async (e) => {
+  const AddPicture = async (e) => {
     e.preventDefault();
     const values = Object.fromEntries(new FormData(e.currentTarget));
+    if (values.title.length < 1) {
+      return ErrorNotify("Title must be at least 1 character long");
+    }
+    if (values.image.length < 1) {
+      return ErrorNotify("You have to provide an image");
+    }
+    if (values.description.length < 5) {
+      return ErrorNotify("Message must be at least 5 character long");
+    }
+
+    if (values.date.length < 1) {
+      return ErrorNotify("You should provide a date");
+    }
+
+    e.currentTarget.reset();
+    SuccessNotify("Your message has been send!");
     values.owner = userId;
     try {
-        const ref = collection(db, "pictures");
-        await addDoc(ref, values);
-        SuccessNotify('Congratulations, you have successfully added a new picture!')
-        navigate('/gallery')
+      const ref = collection(db, "pictures");
+      await addDoc(ref, values);
+      SuccessNotify(
+        "Congratulations, you have successfully added a new picture!"
+      );
+      navigate("/gallery");
     } catch (error) {
-       let errors =  Error(error);
-       errors.forEach(err => {
-            ErrorNotify(err);
-       });
+      let errors = Error(error);
+      errors.forEach((err) => {
+        ErrorNotify(err);
+      });
     }
-   }
+  };
+
   return (
     <section className="listingHome">
       <form className="headingPictures" onSubmit={AddPicture}>
@@ -45,11 +64,11 @@ export default function Pictures() {
         <div className="firstInputField">
           <i className="fa-solid fa-image icon"></i>
           <input
-          type="text"
-          name="image"
-         className="photoPictures"
-         placeholder="Image URL"
-         ></input>
+            type="text"
+            name="image"
+            className="photoPictures"
+            placeholder="Image URL"
+          ></input>
         </div>
         <div className="firstInputField">
           <input type="date" name="date" className="InputField"></input>
@@ -62,7 +81,9 @@ export default function Pictures() {
             className="desc"
           ></textarea>
         </div>
-        <button type="submit" className="Create">Create</button>
+        <button type="submit" className="Create">
+          Create
+        </button>
       </form>
     </section>
   );

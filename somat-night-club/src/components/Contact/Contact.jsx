@@ -1,39 +1,49 @@
-import { collection } from "firebase/firestore";
+// import { collection } from "firebase/firestore";
 import "./Contact.css";
-import { useState } from "react";
+// import { useState } from "react";
+import { ErrorNotify, SuccessNotify } from "../../utils/Notification";
 
+const emailValidator = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/i;
 export default function Contact() {
 
+  // const [name, setName] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [subject, setSubject] = useState("");
+  // const [message, setMessage] = useState("");
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  //   const handleSubmit = (e) => {
+  //       e.preventDefault();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  //       const ref = collection(db, "messages");
 
-        const ref = collection(db, "messages");
+  //      add(messagesRef, {
+  //       name: name,
+  //       phone: phone,
+  //       email: email,
+  //       subject: subject,
+  //       message: message,
+  //     });
 
+  //     setName("");
+  //     setEmail("");
+  //     setMessage("");
+  //     setPhone("");
+  //     setSubject("");
+  //   };
 
-       add(messagesRef, {
-        name: name,
-        phone: phone,
-        email: email,
-        subject: subject,
-        message: message,
-      });
-  
-      setName("");
-      setEmail("");
-      setMessage("");
-      setPhone("");
-      setSubject("");
-    };
+  function handleSubmit(e) {
+    e.preventDefault();
+    let formData = Object.fromEntries(new FormData(e.currentTarget));
+    if (emailValidator.test(formData.email) == false) {
+      return ErrorNotify("Email format is invalid");
+    }
+    e.currentTarget.reset();
+    SuccessNotify("Your message has been send!")
+  }
 
   return (
-    <div className="Contact" onSubmit={handleSubmit}>
+    <div className="Contact">
       <h1 className="Connect">Connect with us</h1>
       <p className="Touch">
         Need to get in touch with us? Fill out the form, so we can help you
@@ -41,15 +51,13 @@ export default function Contact() {
       </p>
       <div className="contact-box">
         <div className="contact-left">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="input-row">
               <div className="input-group">
                 <label>Name</label>
                 <input
                   className="input-contact"
                   type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                   placeholder="Ivan Petrov"
                 ></input>
               </div>
@@ -58,8 +66,6 @@ export default function Contact() {
                 <input
                   className="input-contact"
                   type="phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="+359 889016925"
                 ></input>
               </div>
@@ -70,8 +76,7 @@ export default function Contact() {
                 <input
                   className="input-contact"
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
                   placeholder="somatnightclub@gmail.com"
                 ></input>
               </div>
@@ -80,8 +85,6 @@ export default function Contact() {
                 <input
                   className="input-contact"
                   type="subject"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
                   placeholder="Subject of the problem"
                 ></input>
               </div>
@@ -90,11 +93,9 @@ export default function Contact() {
             <textarea
               rows="5"
               placeholder="Write your message!"
-              value={message}
-                  onChange={(e) => setMessage(e.target.value)}
               className="message"
             ></textarea>
-            <button  type="submit" className="SendContact">
+            <button type="submit" className="SendContact">
               SEND
             </button>
           </form>

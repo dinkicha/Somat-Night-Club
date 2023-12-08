@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import  AuthContext  from "../../Contexts/authContext";
 
 export default function Home() {
+  const { isAuthenticated } = useContext(AuthContext);
   return (
     <div className="HomePage">
       <div className="title-home">
@@ -14,6 +17,7 @@ export default function Home() {
         can edit, delete etc. the reservation if neccessary without any
         problems.
       </p>
+      {!isAuthenticated && (
       <div className="buttonsHome">
         <button className="SignupHome">
           <Link to="/register">Sign up</Link>
@@ -22,6 +26,7 @@ export default function Home() {
           <Link to="/login">Sign in</Link>
         </button>
       </div>
+      )}
       {/* <div className="allImages">
         <div className="title">Most liked pictures</div>
         <div className="images">

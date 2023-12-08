@@ -76,6 +76,10 @@
   position: relative; 
 }
 
+.photoPictures img {
+  aspect-ratio: 1/1;
+}
+
 .firstInputField .icon {
   position: absolute;
   top: 50%;
