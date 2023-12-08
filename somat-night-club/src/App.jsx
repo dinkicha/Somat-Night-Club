@@ -17,7 +17,7 @@ import Logout from "./components/LogOut/Logout";
 import { AuthProvider } from "./Contexts/authContext";
 import { Toaster } from "react-hot-toast";
 import EditList from "./components/EditList/ListEdit";
-import Error from "./components/Error/Error"
+import Error from "./components/Error/noPage"
  
 function App() {
   return (
