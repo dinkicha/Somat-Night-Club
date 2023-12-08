@@ -38,6 +38,18 @@ export default function Contact() {
     if (emailValidator.test(formData.email) == false) {
       return ErrorNotify("Email format is invalid");
     }
+    if (formData.subject.length < 1) {
+      return ErrorNotify("Please enter a subject");
+    }
+    if (formData.message.length < 1) {
+      return ErrorNotify("Please enter a message");
+    }
+    if (formData.phone.length < 1) {
+      return ErrorNotify("Please enter a phone");
+    }
+    if (formData.name.length < 1) {
+      return ErrorNotify("Please enter a name");
+    }
     e.currentTarget.reset();
     SuccessNotify("Your message has been send!")
   }
@@ -58,6 +70,7 @@ export default function Contact() {
                 <input
                   className="input-contact"
                   type="text"
+                  name="name"
                   placeholder="Ivan Petrov"
                 ></input>
               </div>
@@ -66,6 +79,7 @@ export default function Contact() {
                 <input
                   className="input-contact"
                   type="phone"
+                  name="phone"
                   placeholder="+359 889016925"
                 ></input>
               </div>
@@ -85,6 +99,7 @@ export default function Contact() {
                 <input
                   className="input-contact"
                   type="subject"
+                  name="subject"
                   placeholder="Subject of the problem"
                 ></input>
               </div>
@@ -94,6 +109,7 @@ export default function Contact() {
               rows="5"
               placeholder="Write your message!"
               className="message"
+              name="message"
             ></textarea>
             <button type="submit" className="SendContact">
               SEND
