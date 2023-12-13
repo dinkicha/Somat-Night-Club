@@ -18,6 +18,7 @@ import { AuthProvider } from "./Contexts/authContext";
 import { Toaster } from "react-hot-toast";
 import EditList from "./components/EditList/ListEdit";
 import Error from "./components/Error/noPage"
+import AuthGuard from "./components/Guards/auth";
  
 function App() {
   return (
@@ -29,19 +30,23 @@ function App() {
 />
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/profile/:profileId" element={<Profile />} />
-          <Route path="/pictures" element={<Pictures />} />
-          <Route path="/gallery" element={<Gallery />} />
+
+        <Route element={<AuthGuard authenticated={true} />}>
           <Route path="/reservations" element={<Reservations />} />
+          <Route path="/pictures" element={<Pictures />} />
           <Route path="/list" element={<List />} />
           <Route path="/list/:reservationId/edit" element={<EditList />} />
+          <Route path="/profile/:profileId" element={<Profile />} />
           <Route path="/list/:reservationId/details" element={<Details />} />
           <Route path="/profile/:profileId/edit" element={<Edit />} />
+          </Route>
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
