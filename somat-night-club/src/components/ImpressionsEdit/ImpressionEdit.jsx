@@ -24,11 +24,11 @@ export default function EditImpressions() {
       if (ref.exists) {
         return ref.data();
       } else {
-        console.error("Opinion not found");
+        ErrorNotify("Opinion not found");
         return null;
       }
     } catch (error) {
-      console.error("Error getting Opinion:", error.message);
+      ErrorNotify("Error getting Opinion:", error.message);
       return null;
     }
   };
