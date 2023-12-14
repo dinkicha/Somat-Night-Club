@@ -17,32 +17,38 @@ import Logout from "./components/LogOut/Logout";
 import { AuthProvider } from "./Contexts/authContext";
 import { Toaster } from "react-hot-toast";
 import EditList from "./components/EditList/ListEdit";
-import Error from "./components/Error/noPage"
+import Error from "./components/Error/noPage";
 import AuthGuard from "./components/Guards/auth";
- 
+import Opinion from "./components/Opinions/Opinion";
+import Impressions from "./components/ImpressionsList/Impressions";
+import EditImpressions from "./components/ImpressionsEdit/ImpressionEdit";
+
 function App() {
   return (
     <AuthProvider>
       <div className="container">
-      <Toaster
-  position="bottom-right"
-  reverseOrder={true}
-/>
+        <Toaster position="bottom-right" reverseOrder={true} />
         <Header />
         <Routes>
-
-        <Route element={<AuthGuard authenticated={true} />}>
-          <Route path="/reservations" element={<Reservations />} />
-          <Route path="/pictures" element={<Pictures />} />
-          <Route path="/list" element={<List />} />
-          <Route path="/list/:reservationId/edit" element={<EditList />} />
-          <Route path="/profile/:profileId" element={<Profile />} />
-          <Route path="/list/:reservationId/details" element={<Details />} />
-          <Route path="/profile/:profileId/edit" element={<Edit />} />
+          <Route element={<AuthGuard authenticated={true} />}>
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/pictures" element={<Pictures />} />
+            <Route path="/list" element={<List />} />
+            <Route path="/list/:reservationId/edit" element={<EditList />} />
+            <Route
+              path="/impressions/:opinionId/edit"
+              element={<EditImpressions />}
+            />
+            <Route path="/profile/:profileId" element={<Profile />} />
+            <Route path="/list/:reservationId/details" element={<Details />} />
+            <Route path="/profile/:profileId/edit" element={<Edit />} />
+            <Route path="/opinions" element={<Opinion />} />
           </Route>
-
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route element={<AuthGuard authenticated={false} />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Route>
+          <Route path="/impressions" element={<Impressions />} />
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/logout" element={<Logout />} />

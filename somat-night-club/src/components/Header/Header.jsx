@@ -14,8 +14,10 @@ export default function Header() {
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/gallery">Gallery</Link>
+        <Link to="/impressions">Impressions</Link>
         {isAuthenticated && (
           <>
+            <Link to="/opinions">Opinions</Link>
             <Link to="/pictures">Pictures</Link>
             <Link to="/reservations">Reservation</Link>
             <Link to="/list">List</Link>

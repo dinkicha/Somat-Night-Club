@@ -1,0 +1,66 @@
+.opinion-list {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 3em;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+.opinion {
+  border: solid red;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.deleteOpinion {
+  color: #fff;
+  width: 200px;
+}
+
+.deleteOpinion:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.editOpinion {
+  color: #fff;
+  width: 200px;
+}
+
+.editOpinion:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+.opinion-name {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+}
+
+.desctription-opinion {
+  width: 100%;
+  position: relative;
+  word-wrap: break-word;
+white-space: pre-wrap;
+word-break: break-word;
+text-align: left;
+}
+
+.controls {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: auto;
+}
