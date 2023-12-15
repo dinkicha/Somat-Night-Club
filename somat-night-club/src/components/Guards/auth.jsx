@@ -9,8 +9,7 @@ export default function AuthGuard(data) {
   if (ifAuthenticated && !isAuthenticated) {
     return <Navigate to="/login" />;
   } else if (!ifAuthenticated && isAuthenticated) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/noPage" />;
   }
-
   return <Outlet />;
 }
