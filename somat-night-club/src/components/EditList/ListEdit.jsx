@@ -1,9 +1,7 @@
-import { getAuth, updateProfile } from 'firebase/auth';
 import { getFirestore, doc, updateDoc, getDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import {  useNavigate, useParams } from "react-router-dom";
 import { ErrorNotify, SuccessNotify } from '../../utils/Notification';
-import { Link } from "react-router-dom";
 
 
 const db = getFirestore();

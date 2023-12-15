@@ -1,8 +1,8 @@
 import "./List.css";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { getFirestore } from "firebase/firestore";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 
 const db = getFirestore();
 

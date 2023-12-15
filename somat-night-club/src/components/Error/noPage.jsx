@@ -1,18 +1,18 @@
 import "./noPage.css";
-import  error  from "../../assets/error.gif"
-import { Link } from "react-router-dom";
+import  errorgif  from "../../assets/errorgif.webp"
+import {  useNavigate } from "react-router-dom";
+
 
 export default function noPage() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const navigate = useNavigate();
     return (
         <div className="wrapper-404">
             <div className="error-title">
                 Sorry!
             </div>
-            <div className="description-404">
-                We can&apos;t find the page you are looking for.
+            <img src={errorgif} alt="" className="error-404"></img>
+            <button type="submit" className="returnError" onClick={() => navigate(`/`)}>Return</button>
             </div>
-            <img src={error} alt="" className="error-404"></img>
-            <Link to="/" className="return-error">Return</Link>
-        </div>
-    );
+    )
 }

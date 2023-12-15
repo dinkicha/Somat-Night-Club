@@ -7,7 +7,6 @@ import {
   getFirestore,
   onSnapshot,
 } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
 import AuthContext from "../../Contexts/authContext";
 import { ErrorNotify } from "../../utils/Notification";
 
@@ -23,7 +22,6 @@ export default function Gallery() {
     }
   };
 
-  const navigate = useNavigate();
   const { userId } = useContext(AuthContext);
 
   const [pictures, setPicture] = useState([]);
