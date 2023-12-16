@@ -31,7 +31,12 @@ Somat Night Club is a REACT CRUD application that I have build for ReactJS Octob
 • Reservation edit: Owners of the reservation can make changes to their reservation if it is necessary!<br>
 • Profile picture: Authenticated users can change their profile picture by choosing any photo from their computer!
 
-# 4.Screenshots
+# 4.Usage
+<b>Open the integrated terminal and paste these commands!</b> <br>
+•  npm install <br>
+•  npm run dev
+
+# 5.Screenshots
 # Home Page
 [![Image from Gyazo](https://i.gyazo.com/fefbfdea54ddbbf18d16b6bf906a5a9e.png)](https://gyazo.com/fefbfdea54ddbbf18d16b6bf906a5a9e)
 # Contact Page
