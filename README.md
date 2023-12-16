@@ -36,7 +36,6 @@ Somat Night Club is a REACT CRUD application that I have build for ReactJS Octob
 •  npm install <br>
 •  npm run dev
 # Demo User
-<b>Demo User</b> <br>
 <b>Email:</b> gospodinov@gmail.com <br>
 <b>Password:</b> 123456
 
