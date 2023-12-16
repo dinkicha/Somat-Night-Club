@@ -73,7 +73,7 @@ export default function Details() {
           <p>People: {reservation.people}</p>
           <p>Reservation date: {reservation.date}</p>
           <div className="buttonsDetails">
-            <button
+          <button
               className="returnListDetails"
               onClick={() => navigate(`/list`)}
             >

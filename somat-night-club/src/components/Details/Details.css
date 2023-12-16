@@ -20,6 +20,13 @@
   background: rgba(17, 107, 143, 0.877);
 }
 
+.returnListDetails {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .returnListDetails:hover {
   background: rgba(17, 107, 143, 0.877);
 }
@@ -27,7 +34,9 @@
 .buttonsDetails {
   display: flex;
   gap: 20px;
-  height: 65px;
+  height: 65px; 
+  justify-content: center;
+  align-items: center;
 }
 
 .buttonsDetails button {
