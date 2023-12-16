@@ -44,7 +44,9 @@ export default function Profile() {
       const userDocRef = doc(db, "users", profileId);
       await deleteDoc(userDocRef);
       logoutHandler();
-      navigate("/login");
+      setTimeout(() => {
+        navigate("/login");
+      }, 300);
     } catch (error) {
       ErrorNotify("Error deleting user:" + error.message);
     }
