@@ -29,7 +29,10 @@ Somat Night Club is a REACT CRUD application that I have build with ReactJS. Som
 • Reservation Creation: Authenticated users can create reservation and they should write their name also for how many people is the reservation for, date of the party and details that can be used to tell if they want a table, booth(VIP also included), dry bar etc. The group can tell if it is birthday party or some occasion!<br>
 • Reservation list: Here everyone of the authenticated users can see the reservations, of course their own and see the full info by clicking the details button!<br>
 • Reservation edit: Owners of the reservation can make changes to their reservation if it is necessary!<br>
+• Impression edit: Owners of the opinions can make changes to their opinions if they want! <br>
+• Impression delete: Owners can delete the posted imppression if they thought that They don't like it anymore! <br>
 • Profile picture: Authenticated users can change their profile picture by choosing any photo from their computer!
+
 
 # 4.Usage
 <b>Open the integrated terminal and paste these commands!</b> <br>
