@@ -1,6 +1,6 @@
 # Somat Night Club
 
-Somat Night Club is a REACT CRUD application that I have build for ReactJS October 2023 @SoftUni. Somat Night Club is website that you can make your reservations for the club, to add pictures from the night, so you will never forget your expirience!
+Somat Night Club is a REACT CRUD application that I have build with ReactJS. Somat Night Club is website that you can make your reservations for the club, to add pictures from the night, so you will never forget your expirience!
 
 # 1.Technical Characteristics
 # To build Somat Night Club I used:
