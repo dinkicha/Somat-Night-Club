@@ -82,7 +82,6 @@ export default function Profile() {
       setUserProfile(profile);
         } catch (error) {
           let errors = Error(error);
-          console.log(errors);
           errors.forEach((err) => {
             ErrorNotify(err);
           });
